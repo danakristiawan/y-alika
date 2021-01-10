@@ -52,6 +52,16 @@ class Keluarga_model extends CI_Model
         return json_decode($response->getBody()->getContents(), true);
     }
 
+    public function deleteKeluargaAll()
+    {
+        $response = $this->_client->request('DELETE', 'all-data-keluarga', [
+            'form_params' => [
+                'X-API-KEY' => 'admin-alika'
+            ]
+        ]);
+        return json_decode($response->getBody()->getContents(), true);
+    }
+
     public function countKeluarga()
     {
         $response = $this->_client->request('GET', 'count-data-keluarga', [

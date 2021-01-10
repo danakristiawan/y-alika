@@ -52,6 +52,16 @@ class Pegawai_model extends CI_Model
         return json_decode($response->getBody()->getContents(), true);
     }
 
+    public function deletePegawaiAll()
+    {
+        $response = $this->_client->request('DELETE', 'all-data-pegawai', [
+            'form_params' => [
+                'X-API-KEY' => 'admin-alika'
+            ]
+        ]);
+        return json_decode($response->getBody()->getContents(), true);
+    }
+
     public function countPegawai()
     {
         $response = $this->_client->request('GET', 'count-data-pegawai', [

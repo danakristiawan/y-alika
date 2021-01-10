@@ -47,4 +47,11 @@ class Pegawai extends CI_Controller
         $this->session->set_flashdata('pesan', 'Data berhasil dihapus.');
         redirect('pegawai');
     }
+
+    public function delete_all()
+    {
+        $this->pegawai->deletePegawaiAll();
+        $this->session->set_flashdata('pesan', 'Data berhasil dihapus.');
+        redirect('pegawai');
+    }
 }

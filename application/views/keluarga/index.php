@@ -14,6 +14,7 @@
     </div>
     <div class="row mb-3">
         <div class="col-lg-7">
+            <a href="<?= base_url('keluarga/delete-all'); ?>" class="btn btn-sm btn-outline-secondary mt-1 mb-1" onclick="return confirm('Apakah Anda yakin akan menghapus semua data?');"> Hapus Semua Data</a>
         </div>
         <div class="col-lg-5">
             <form action="" method="post" autocomplete="off">

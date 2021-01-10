@@ -47,4 +47,11 @@ class Keluarga extends CI_Controller
         $this->session->set_flashdata('pesan', 'Data berhasil dihapus.');
         redirect('keluarga');
     }
+
+    public function delete_all()
+    {
+        $this->keluarga->deleteKeluargaAll();
+        $this->session->set_flashdata('pesan', 'Data berhasil dihapus.');
+        redirect('keluarga');
+    }
 }
