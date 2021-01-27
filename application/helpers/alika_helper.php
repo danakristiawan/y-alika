@@ -19,6 +19,11 @@ function base_uri()
 
 function auth()
 {
-    $auth = ['admin', 'alika-1234'];
+    $auth = ['superalika', 'Hkkg456*#@ghj@#jkkknb4578HrtgJgffg875hfg&kjkh*hgf*gff@fghjjYbbh654g6sh6sj8253nsg6j*hnb#'];
     return $auth;
+}
+
+function apiKey()
+{
+    return 'hGfdg456ghD4f566afjh6Fg@hgb#jijk';
 }

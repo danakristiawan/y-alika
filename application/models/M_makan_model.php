@@ -59,7 +59,7 @@ class M_makan_model extends CI_Model
                     'pph' => $r['pph'],
                     'bruto' => ($r['jmlhari'] * $r['tarif']),
                     'netto' => (($r['jmlhari'] * $r['tarif']) - $r['pph']),
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -83,7 +83,7 @@ class M_makan_model extends CI_Model
                 'pph' => $row['pph'],
                 'bruto' => ($row['jmlhari'] * $row['tarif']),
                 'netto' => (($row['jmlhari'] * $row['tarif']) - $row['pph']),
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

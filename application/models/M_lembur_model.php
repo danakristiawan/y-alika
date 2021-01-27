@@ -93,7 +93,7 @@ class M_lembur_model extends CI_Model
                     'jkerja' => $r['jkerja'],
                     'jlibur' => $r['jlibur'],
                     'jmakan' => $r['jmakan'],
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -151,7 +151,7 @@ class M_lembur_model extends CI_Model
                 'jkerja' => $r['jkerja'],
                 'jlibur' => $r['jlibur'],
                 'jmakan' => $r['jmakan'],
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

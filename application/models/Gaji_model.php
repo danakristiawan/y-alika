@@ -21,7 +21,7 @@ class Gaji_model extends CI_Model
                 $id === null ?: 'id' => $id,
                 'limit' => $limit,
                 'offset' => $offset,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
@@ -35,7 +35,7 @@ class Gaji_model extends CI_Model
                 'keyword2' => $keyword2,
                 'limit' => $limit,
                 'offset' => $offset,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
 
@@ -47,7 +47,7 @@ class Gaji_model extends CI_Model
         $response = $this->_client->request('DELETE', 'data-gaji', [
             'form_params' => [
                 'id' => $id,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
@@ -57,7 +57,7 @@ class Gaji_model extends CI_Model
     {
         $response = $this->_client->request('GET', 'count-data-gaji', [
             'query' => [
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

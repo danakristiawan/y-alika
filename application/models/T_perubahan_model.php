@@ -57,7 +57,7 @@ class T_perubahan_model extends CI_Model
                     'kdgapok' => $r['kdgapok'],
                     'bulan' => $r['bulan'],
                     'tahun' => $r['tahun'],
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -79,7 +79,7 @@ class T_perubahan_model extends CI_Model
                 'kdgapok' => $r['kdgapok'],
                 'bulan' => $r['bulan'],
                 'tahun' => $r['tahun'],
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

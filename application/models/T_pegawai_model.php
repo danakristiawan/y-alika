@@ -56,7 +56,7 @@ class T_pegawai_model extends CI_Model
                     'npwp' => $r['npwp'],
                     'nm_bank' => $r['nm_bank'],
                     'nmrek' => $r['nmrek'],
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -87,7 +87,7 @@ class T_pegawai_model extends CI_Model
                 'npwp' => $r['npwp'],
                 'nm_bank' => $r['nm_bank'],
                 'nmrek' => $r['nmrek'],
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

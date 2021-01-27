@@ -43,7 +43,7 @@ class T_keluarga_model extends CI_Model
                     'kdkeluarga' => $r['kdkeluarga'],
                     'tgllhr' => $r['tgllhr'],
                     'kddapat' => $r['kddapat'],
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -61,7 +61,7 @@ class T_keluarga_model extends CI_Model
                 'kdkeluarga' => $r['kdkeluarga'],
                 'tgllhr' => $r['tgllhr'],
                 'kddapat' => $r['kddapat'],
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

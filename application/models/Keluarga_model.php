@@ -21,7 +21,7 @@ class Keluarga_model extends CI_Model
                 $id === null ?: 'id' => $id,
                 'limit' => $limit,
                 'offset' => $offset,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
@@ -34,7 +34,7 @@ class Keluarga_model extends CI_Model
                 'keyword' => $keyword,
                 'limit' => $limit,
                 'offset' => $offset,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
 
@@ -46,7 +46,7 @@ class Keluarga_model extends CI_Model
         $response = $this->_client->request('DELETE', 'data-keluarga', [
             'form_params' => [
                 'id' => $id,
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
@@ -56,7 +56,7 @@ class Keluarga_model extends CI_Model
     {
         $response = $this->_client->request('DELETE', 'all-data-keluarga', [
             'form_params' => [
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
@@ -66,7 +66,7 @@ class Keluarga_model extends CI_Model
     {
         $response = $this->_client->request('GET', 'count-data-keluarga', [
             'query' => [
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);

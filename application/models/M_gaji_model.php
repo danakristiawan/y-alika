@@ -95,7 +95,7 @@ class M_gaji_model extends CI_Model
                     'potlain' => $r['potlain'],
                     'taperum' => $r['taperum'],
                     'bpjs' => $r['bpjs'],
-                    'X-API-KEY' => 'admin-alika'
+                    'X-API-KEY' => apiKey()
                 ]
             ]);
         }
@@ -150,7 +150,7 @@ class M_gaji_model extends CI_Model
                 'potlain' => $r['potlain'],
                 'taperum' => $r['taperum'],
                 'bpjs' => $r['bpjs'],
-                'X-API-KEY' => 'admin-alika'
+                'X-API-KEY' => apiKey()
             ]
         ]);
         return json_decode($response->getBody()->getContents(), true);
