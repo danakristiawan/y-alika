@@ -8,6 +8,7 @@ class M_lembur_model extends CI_Model
     {
         $this->_client = new Client([
             'base_uri' => base_uri(),
+            'verify' => false,
             'auth' => auth()
         ]);
     }
