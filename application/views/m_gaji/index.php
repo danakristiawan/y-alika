@@ -61,6 +61,7 @@
                                     <div class="btn-group btn-group-sm" role="group">
                                         <a href="<?= base_url('m-gaji/detail/') . $thn . '/' . $bln . '/' . $kdjns . '/' . $r['kdsatker'] . '/' . $r['kdanak'] . '/' . $r['kdgapok']; ?>" class="btn btn-sm btn-outline-secondary pt-0 pb-0">Detail</a>
                                         <a href="<?= base_url('m-gaji/upload/') . $thn . '/' . $bln . '/' . $kdjns . '/' . $r['kdsatker'] . '/' . $r['kdanak'] . '/' . $r['kdgapok']; ?>" class="btn btn-sm btn-outline-secondary pt-0 pb-0" onclick="return confirm('Apakah Anda yakin akan mengupload data ini?');">Upload</a>
+                                        <a href="<?= base_url('m-gaji/ekspor/') . $thn . '/' . $bln . '/' . $kdjns . '/' . $r['kdsatker'] . '/' . $r['kdanak'] . '/' . $r['kdgapok']; ?>" class="btn btn-sm btn-outline-secondary pt-0 pb-0">Ekspor</a>
                                     </div>
                                 </td>
                             </tr>
